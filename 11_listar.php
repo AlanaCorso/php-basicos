@@ -17,7 +17,7 @@
     $result = $conn->query($sql);
 
     // Verifica se existem registros e os exibe em formato de tabela
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0) { // "Conta" o resultado, se for maior que 0, linha por linha
         echo "<table border= '1'>";
             echo "<tr>
                     <th>ID</th>
