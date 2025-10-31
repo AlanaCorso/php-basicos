@@ -1,20 +1,12 @@
 <?php
-    // Página de entrada (15d_login.php)
-    session_start();
+session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $_SESSION['nome'] = $_POST ['nome'];
-        $_SESSION['cor'] = $_POST ['cor'];
-
-        if ($$_SESSION['nome'] == 'Alana') {
-            header("Location: 15b_restrita.php");
-        exit();
-        } else {
-            $erro = "Usuário ou senha incorretos.";
-        }
-
-    }
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION["nome"] = $_POST["nome"];
+    $_SESSION["cor"] = $_POST["cor"];
+    header("Location: 15d_perfil.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +23,7 @@
         <label for="nome">Seu nome:</label><br>
         <input type="text" name="nome" required><br><br>
 
-        <label for="cor">Insira sua cor prefeira para plano de fundo:</label><br>
+        <label for="cor">Insira sua cor preferida para plano de fundo:</label><br>
 
 
         <select name="cor" id="">
